@@ -1,0 +1,634 @@
+{
+ "células": [
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<div class=\"alerta alerta-bloque alerta-info\" style=\"margin-top: 20px\">\n",
+    " <a href=\"https://cocl.us/topNotebooksPython101Coursera\">\n",
+    " <img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Ad/TopAd.png\" width=\"750\" align =\"centro\">\n",
+    "</a>\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<a href=\"https://cognitiveclass.ai/\">\n",
+    " <img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Ad/CCLog.png\" width=\"200\" align =\"centro\">\n",
+    "</a>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h1>Lectura de archivos Python</h1>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<p><strong>¡Bienvenido!</strong> Este cuaderno le enseñará cómo leer el archivo de texto en el lenguaje de programación Python. Al final de este laboratorio, sabrá cómo leer archivos de texto.</p> "
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h2>Índice</h2>\n",
+    "<div class=\"alerta alerta-bloque alerta-info\" style=\"margin-top: 20px\">\n",
+    " <ul>\n",
+    " <li><a href=\"download\">Descargar datos</a></li>\n",
+    " <li><a href=\"read\">Lectura de archivos de texto</a></li>\n",
+    " <li><a href=\"better\">Una mejor manera de abrir un archivo</a></li>\n",
+    "</ul>\n",
+    " <p>\n",
+    " Tiempo estimado necesario: <strong>40 min</strong>\n",
+    "</p>\n",
+    "</div>\n",
+    "\norte",
+    "<hr>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h2 id=\"descargar\">Descargar datos</h2>"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Descargar archivo de ejemplo\n",
+    "\norte",
+    "!wget -O /resources/data/Example1.txt https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/labs/example1.txt"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<hr>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h2 id=\"read\">Lectura de archivos de texto</h2>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Una forma de leer o escribir un archivo en Python es usar la función incorporada <code>open</code>. La función <code>open</code> proporciona un <b>objeto de archivo</b> que contiene los métodos y atributos que necesita para leer, guardar y manipular el archivo. En este cuaderno, solo cubriremos archivos <b>.txt</b>. El primer parámetro que necesita es la ruta del archivo y el archivo nombre. A continuación se muestra un ejemplo:"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%204/Images/ReadOpen.png\" width=\" 500\" />"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    " El argumento de modo es opcional y el valor predeterminado es <b>r</b>. En este cuaderno solo cubrimos dos modos: \n",
+    "<último>\n",
+    " <li><b>r</b> Modo de lectura para leer archivos </li>\n",
+    " <li><b>w</b> Modo de escritura para escribir archivos</li>\n",
+    "</ul>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Para el siguiente ejemplo, usaremos el archivo de texto <b>Ejemplo1.txt</b>. El archivo se muestra de la siguiente manera:"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%204/Images/ReadFile.png\" width=\" 200\" />"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Leemos el archivo:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": 1,
+   "metadatos": {},
+   "salidas": [
+    {
+     "ename": "Error de archivo no encontrado",
+     "evalue": "[Errno 2] No existe tal archivo o directorio: '/resources/data/Example1.txt'",
+     "tipo_de_salida": "error",
+     "rastrear": [
+      "\u001b[0;31m------------------------------------------- --------------------------------\u001b[0m",
+      "\u001b[0;31mFileNotFoundError\u001b[0m Traceback (última llamada más reciente)",
+      "\u001b[0;32m<ipython-input-1-a18b2b49b9a3>\u001b[0m en \u001b[0;36m<módulo>\u001b[0;34m\u001b[0m\n\u001b[1;32m 2\ u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m 3\u001b[0m \u001b[0mejemplo1\u001b[0m \u001b[0;34m=\u001b[0m \ u001b[0;34m\"/resources/data/Ejemplo1.txt\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[ 0;32m----> 4\u001b[0;31m \u001b[0mfile1\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0moopen\u001b[0m\u001b[0;34m(\ u001b[0m\u001b[0m\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m\"r\"\u001b[0m\u001b[0;34m)\u001b[0m\u001b [0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+      "\u001b[0;31mFileNotFoundError\u001b[0m: [Errno 2] No existe tal archivo o directorio: '/resources/data/Example1.txt'"
+     ]
+    }
+   ],
+   "fuente": [
+    "# Leer el Ejemplo1.txt\n",
+    "\norte",
+    "ejemplo1 = \"/recursos/datos/Ejemplo1.txt\"\n",
+    "archivo1 = abrir (ejemplo1, \"r\")"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos ver los atributos del archivo".
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "El nombre del archivo:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime la ruta del archivo\n",
+    "\norte",
+    "archivo1.nombre"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    " El modo en el que se encuentra el objeto de archivo:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime el modo de archivo, ya sea 'r' o 'w'\n",
+    "\norte",
+    "archivo1.modo"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos leer el archivo y asignarlo a una variable:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": 2,
+   "metadatos": {},
+   "salidas": [
+    {
+     "ename": "NombreError",
+     "evalue": "el nombre 'archivo1' no está definido",
+     "tipo_de_salida": "error",
+     "rastrear": [
+      "\u001b[0;31m------------------------------------------- --------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m Traceback (última llamada más reciente)",
+      "\u001b[0;32m<ipython-input-2-5af33e8ce760>\u001b[0m en \u001b[0;36m<módulo>\u001b[0;34m\u001b[0m\n\u001b[1;32m 1\ u001b[0m \u001b[0;31m# Leer el archivo\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[ 0m\n\u001b[1;32m 2\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b [0mFileContent\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mfile1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mread\u001b[0m\u001b[0;34m (\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1 ;32m 4\u001b[0m\u001b[0mFileContent\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+      "\u001b[0;31mNameError\u001b[0m: el nombre 'archivo1' no está definido"
+     ]
+    }
+   ],
+   "fuente": [
+    "# Leer el archivo\n",
+    "\norte",
+    "ContenidoArchivo = archivo1.leer()\n",
+    "Contenido del archivo"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "La <b>/n</b> significa que hay una nueva línea".
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos imprimir el archivo: "
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime el archivo con '\\n' como una nueva línea\n",
+    "\norte",
+    "imprimir (Contenido del archivo)"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "El archivo es de tipo cadena:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Tipo de contenido del archivo\n",
+    "\norte",
+    "tipo (Contenido del archivo)"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Debemos cerrar el archivo objeto:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {
+    "colapsado": cierto,
+    "jupiter": {
+     "salidas_ocultas": verdadero
+    }
+   },
+   "salidas": [],
+   "fuente": [
+    "# Cerrar archivo después de finalizar\n",
+    "\norte",
+    "archivo1.cerrar()"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<hr>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h2 id=\"better\">Una mejor manera de abrir un archivo</h2>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Usar la declaración <code>with</code> es una mejor práctica, cierra automáticamente el archivo incluso si el código encuentra una excepción. El código ejecutará todo en el bloque de sangría y luego cerrará el objeto del archivo".
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Abrir archivo usando con\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    " Contenido del archivo = archivo1.leer()\n",
+    " imprimir (Contenido del archivo)"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "El objeto de archivo está cerrado, puede verificarlo ejecutando la siguiente celda:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Verificar si el archivo está cerrado\n",
+    "\norte",
+    "archivo1.cerrado"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos ver la información en el archivo:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Ver el contenido del archivo\n",
+    "\norte",
+    "imprimir (Contenido del archivo)"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "La sintaxis es un poco confusa ya que el objeto del archivo está después de la declaración <code>as</code>. Tampoco cerramos explícitamente el archivo. Por lo tanto, resumimos los pasos en una figura:"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%204/Images/ReadWith.png\" width=\" 500\" />"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "No tenemos que leer todo el archivo, por ejemplo, podemos leer los primeros 4 caracteres ingresando tres como parámetro en el método **.read()**:\n"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Lee los primeros cuatro caracteres\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    "imprimir(archivo1.leer(4))"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Una vez que se llama al método <code>.read(4)</code>, se llaman los primeros 4 caracteres. Si volvemos a llamar al método, se llaman los siguientes 4 caracteres. El resultado de la siguiente celda demostrará el proceso para diferentes entradas al método <code>read()</code>:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Leer cierta cantidad de caracteres\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    "imprimir(archivo1.leer(4))\n",
+    "imprimir(archivo1.leer(4))\n",
+    "imprimir(archivo1.leer(7))\n",
+    "imprimir(archivo1.leer(15))"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "El proceso se ilustra en la siguiente figura, y cada color representa la parte del archivo que se lee después de llamar al método <code>read()</code>:"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%204/Images/ReadChar.png\" width=\" 500\" />"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    " Aquí hay un ejemplo usando el mismo archivo, pero en su lugar leemos 16, 5 y luego 9 caracteres a la vez: "
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Leer cierta cantidad de caracteres\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    "imprimir(archivo1.leer(16))\n",
+    "imprimir(archivo1.leer(5))\n",
+    "imprimir(archivo1.leer(9))"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "También podemos leer una línea del archivo a la vez usando el método <code>readline()</code>: "
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Leer una línea\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    " print(\"primera línea: \" + archivo1.readline())"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos usar un ciclo para iterar a través de cada línea: \n"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Iterar a través de las líneas\n",
+    "\norte",
+    "con abierto(ejemplo1,\"r\") como archivo1:\n",
+    "yo = 0;\n",
+    " para línea en archivo1:\n",
+    " print(\"Iteración\", str(i), \": \", línea)\n",
+    "yo = yo + 1;"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Podemos usar el método <code>readlines()</code> para guardar el archivo de texto en una lista: "
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {
+    "colapsado": cierto,
+    "jupiter": {
+     "salidas_ocultas": verdadero
+    }
+   },
+   "salidas": [],
+   "fuente": [
+    "# Leer todas las líneas y guardar como lista\n",
+    "\norte",
+    "con abierto(ejemplo1, \"r\") como archivo1:\n",
+    " FileasList = archivo1.readlines()"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Cada elemento de la lista corresponde a una línea de texto:"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime la primera línea\n",
+    "\norte",
+    "FileasList[0]"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime la segunda línea\n",
+    "\norte",
+    "Lista de archivos[1]"
+   ]
+  },
+  {
+   "cell_type": "código",
+   "recuento_ejecuciones": nulo,
+   "metadatos": {},
+   "salidas": [],
+   "fuente": [
+    "# Imprime la tercera línea\n",
+    "\norte",
+    "Lista de archivos [2]"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<hr>\n",
+    "<h2>¡El último ejercicio!</h2>\n",
+    "<p>Felicitaciones, completó su primera lección y laboratorio práctico en Python. Sin embargo, hay una cosa más que debe hacer. La comunidad de ciencia de datos alienta a compartir el trabajo. La mejor manera de compartir y mostrar su trabajo es para compartirlo en GitHub. Al compartir su bloc de notas en GitHub, no solo está construyendo su reputación con otros científicos de datos, sino que también puede mostrarla cuando solicite un trabajo. Aunque este fue su primer trabajo, nunca es es demasiado pronto para empezar a desarrollar buenos hábitos. Por lo tanto, lea y siga <a href=\"https://cognitiveclass.ai/blog/data-scientists-stand-out-by-sharing-your-notebooks/\" target= \"_blank\">este artículo</a> para aprender a compartir tu trabajo.\n",
+    "<hr>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<div class=\"alerta alerta-bloque alerta-info\" style=\"margin-top: 20px\">\n",
+    "<h2>¡Obtenga IBM Watson Studio gratis!</h2>\n",
+    " <p><a href=\"https://cocl.us/bottemNotebooksPython101Coursera\"><img src=\"https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses- data/CognitiveClass/PY0101EN/Ad/BottomAd.png\" width=\"750\" align=\"center\"></a></p>\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<h3>Acerca de los autores:</h3> \n",
+    "<p><a href=\"https://www.linkedin.com/in/joseph-s-50398b136/\" target=\"_blank\">Joseph Santarcangelo</a> es científico de datos en IBM y tiene un doctorado en ingeniería eléctrica. Su investigación se centró en el uso del aprendizaje automático, el procesamiento de señales y la visión artificial para determinar cómo los videos afectan la cognición humana. Joseph ha estado trabajando para IBM desde que completó su doctorado.</p>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "Otros colaboradores: <a href=\"www.linkedin.com/in/jiahui-mavis-zhou-a4537814a\">Mavis Zhou</a>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<hr>"
+   ]
+  },
+  {
+   "cell_type": "rebaja",
+   "metadatos": {},
+   "fuente": [
+    "<p>Copyright © 2018 IBM Developer Skills Network. Este cuaderno y su código fuente se publican bajo los términos de la <a href=\"https://cognitiveclass.ai/mit-license/\">Licencia MIT< /a>.</p>"
+   ]
+  }
+ ],
+ "metadatos": {
+  "especificación del núcleo": {
+   "display_name": "Python",
+   "idioma": "pitón",
+   "nombre": "conda-env-python-py"
+  },
+  "info_idioma": {
+   "modo de espejo de código": {
+    "nombre": "ipython",
+    "versión": 3
+   },
+   "extensión_de_archivo": ".py",
+   "mimetype": "texto/x-python",
+   "nombre": "pitón",
+   "nbconvert_exporter": "pitón",
+   "pygments_lexer": "ipython3",
+   "versión": "3.6.7"
+  }
+ },
+ "formato nb": 4,
+ "nbformat_menor": 4
+}
